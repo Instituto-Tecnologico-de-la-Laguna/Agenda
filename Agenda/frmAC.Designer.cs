@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             txtNombre = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -42,6 +43,8 @@
             cmbSexo = new ComboBox();
             btnAceptar = new Button();
             btnCancelar = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // txtNombre
@@ -50,6 +53,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(207, 31);
             txtNombre.TabIndex = 0;
+            txtNombre.Validating += txtNombre_Validating;
             // 
             // label1
             // 
@@ -162,6 +166,10 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // frmAC
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -183,6 +191,7 @@
             Controls.Add(txtNombre);
             Name = "frmAC";
             Text = "Usuario";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,5 +212,6 @@
         private ComboBox cmbSexo;
         private Button btnAceptar;
         private Button btnCancelar;
+        private ErrorProvider errorProvider1;
     }
 }
