@@ -12,9 +12,41 @@ namespace Agenda
 {
     public partial class frmAC : Form
     {
+        Datos datos= new Datos();
         public frmAC()
         {
             InitializeComponent();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Los datos son correctos?", "Sistema"
+                , MessageBoxButtons.OKCancel, 
+                MessageBoxIcon.Question) == DialogResult.OK) 
+            {
+                bool j = datos.ejecutarABC("Insert Into Usuarios(nombre,apaterno,amaterno," +
+                    "curp,fechaNacimiento,sexo)" +
+                    " Values('"+ txtNombre .Text +"','"+ txtPaterno .Text + "'," +
+                    "'"+txtMaterno .Text + "','" + mtbCurp .Text + "','" + 
+                    dtpFecha.Value.ToShortDateString() + "','" + cmbSexo .Text +"')");
+                if (j == true)
+                {
+                    MessageBox.Show("Datos Agregados Correctamente", "Sistema", 
+                        MessageBoxButtons.OK, 
+                        MessageBoxIcon.Information);
+                    txtNombre.Clear();
+                    txtMaterno .Clear();
+                    txtPaterno.Clear();
+                    mtbCurp.Clear();
+                    cmbSexo.Text = "";
+
+                }
+                else
+                    MessageBox.Show("Error", "Sistema", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+
+            }
+
         }
     }
 }

@@ -104,6 +104,7 @@
             // mtbCurp
             // 
             mtbCurp.Location = new Point(12, 272);
+            mtbCurp.Mask = "aaaa000000aaaaaaa0";
             mtbCurp.Name = "mtbCurp";
             mtbCurp.Size = new Size(207, 31);
             mtbCurp.TabIndex = 8;
@@ -150,6 +151,7 @@
             btnAceptar.TabIndex = 13;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
