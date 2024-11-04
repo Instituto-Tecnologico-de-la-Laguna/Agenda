@@ -32,6 +32,8 @@
             archivoToolStripMenuItem = new ToolStripMenuItem();
             catalogoToolStripMenuItem = new ToolStripMenuItem();
             usuariosToolStripMenuItem = new ToolStripMenuItem();
+            altaToolStripMenuItem = new ToolStripMenuItem();
+            mostrarToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,10 +62,25 @@
             // 
             // usuariosToolStripMenuItem
             // 
+            usuariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { altaToolStripMenuItem, mostrarToolStripMenuItem });
             usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             usuariosToolStripMenuItem.Size = new Size(270, 34);
             usuariosToolStripMenuItem.Text = "Usuarios";
             usuariosToolStripMenuItem.Click += usuariosToolStripMenuItem_Click;
+            // 
+            // altaToolStripMenuItem
+            // 
+            altaToolStripMenuItem.Name = "altaToolStripMenuItem";
+            altaToolStripMenuItem.Size = new Size(270, 34);
+            altaToolStripMenuItem.Text = "Alta";
+            altaToolStripMenuItem.Click += altaToolStripMenuItem_Click;
+            // 
+            // mostrarToolStripMenuItem
+            // 
+            mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
+            mostrarToolStripMenuItem.Size = new Size(270, 34);
+            mostrarToolStripMenuItem.Text = "Mostrar";
+            mostrarToolStripMenuItem.Click += mostrarToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -74,6 +91,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frmMenu";
             Text = "Menu";
+            WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -86,5 +104,7 @@
         private ToolStripMenuItem archivoToolStripMenuItem;
         private ToolStripMenuItem catalogoToolStripMenuItem;
         private ToolStripMenuItem usuariosToolStripMenuItem;
+        private ToolStripMenuItem altaToolStripMenuItem;
+        private ToolStripMenuItem mostrarToolStripMenuItem;
     }
 }
