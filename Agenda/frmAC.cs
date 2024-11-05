@@ -19,6 +19,17 @@ namespace Agenda
             InitializeComponent();
         }
 
+        public frmAC(string nombre,string apaterno, string amaterno,string CURP,string fecha,string sexo)
+        {
+            InitializeComponent();
+            txtNombre .Text = nombre;
+            txtPaterno .Text = apaterno;
+            txtMaterno .Text = amaterno;
+            mtbCurp .Text = CURP;
+            dtpFecha.Value = Convert.ToDateTime(fecha);
+            cmbSexo.Text = sexo;
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Los datos son correctos?", "Sistema"

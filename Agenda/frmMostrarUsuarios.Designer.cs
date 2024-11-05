@@ -31,15 +31,21 @@
             components = new System.ComponentModel.Container();
             dgvUsuarios = new DataGridView();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            toolStripMenuEditar = new ToolStripMenuItem();
+            toolStripMenuEliminar = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // dgvUsuarios
             // 
+            dgvUsuarios.AllowUserToAddRows = false;
+            dgvUsuarios.AllowUserToDeleteRows = false;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.ContextMenuStrip = contextMenuStrip1;
             dgvUsuarios.Location = new Point(0, 63);
             dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.ReadOnly = true;
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(1128, 375);
             dgvUsuarios.TabIndex = 0;
@@ -47,9 +53,22 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(24, 24);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuEditar, toolStripMenuEliminar });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            contextMenuStrip1.Text = "Modificar";
+            contextMenuStrip1.Size = new Size(241, 101);
+            // 
+            // toolStripMenuEditar
+            // 
+            toolStripMenuEditar.Name = "toolStripMenuEditar";
+            toolStripMenuEditar.Size = new Size(240, 32);
+            toolStripMenuEditar.Text = "Editar";
+            toolStripMenuEditar.Click += toolStripMenuEditar_Click;
+            // 
+            // toolStripMenuEliminar
+            // 
+            toolStripMenuEliminar.Name = "toolStripMenuEliminar";
+            toolStripMenuEliminar.Size = new Size(240, 32);
+            toolStripMenuEliminar.Text = "Eliminar";
             // 
             // frmMostrarUsuarios
             // 
@@ -61,6 +80,7 @@
             Text = "Mostrar Usuarios";
             Load += frmMostrarUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -68,5 +88,7 @@
 
         private DataGridView dgvUsuarios;
         private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem toolStripMenuEditar;
+        private ToolStripMenuItem toolStripMenuEliminar;
     }
 }
