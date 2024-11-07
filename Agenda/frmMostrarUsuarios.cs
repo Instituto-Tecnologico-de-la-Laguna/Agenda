@@ -24,6 +24,7 @@ namespace Agenda
         }
         private void ActualizarGrid()
         {
+            //Daniela Aldaco
             DataSet ds;
             ds = datos.consulta("Select id, Nombre, APaterno,Amaterno,CURP," +
                 "FechaNacimiento,Sexo From Usuarios");
