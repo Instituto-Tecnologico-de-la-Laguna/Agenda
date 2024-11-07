@@ -69,6 +69,7 @@
             toolStripMenuEliminar.Name = "toolStripMenuEliminar";
             toolStripMenuEliminar.Size = new Size(240, 32);
             toolStripMenuEliminar.Text = "Eliminar";
+            toolStripMenuEliminar.Click += toolStripMenuEliminar_Click;
             // 
             // frmMostrarUsuarios
             // 
@@ -78,6 +79,7 @@
             Controls.Add(dgvUsuarios);
             Name = "frmMostrarUsuarios";
             Text = "Mostrar Usuarios";
+            Activated += frmMostrarUsuarios_Activated;
             Load += frmMostrarUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             contextMenuStrip1.ResumeLayout(false);

@@ -124,10 +124,12 @@
             // 
             // dtpFecha
             // 
+            dtpFecha.CustomFormat = "yyyy-MM-dd";
             dtpFecha.Location = new Point(318, 53);
             dtpFecha.Name = "dtpFecha";
             dtpFecha.Size = new Size(339, 31);
             dtpFecha.TabIndex = 10;
+            dtpFecha.Value = new DateTime(2024, 11, 13, 0, 0, 0, 0);
             // 
             // label6
             // 
